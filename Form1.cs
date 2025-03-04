@@ -49,7 +49,7 @@ namespace BasicToAdvance_01
         }
         private static string apiUrl = "https://gtccheats.shop/Blacklist/Login/api.php"; // Do Not Change This URL
         private static string Checkblack = "https://gtccheats.shop/Blacklist/Login/CheckBlack.php"; // Do Not Change This URL
-        private static string privateKey = "Your Private Key Here"; // Replace with actual key
+        private static string privateKey = "f6070af3c7fd29cf5de87a99ae5cdf43"; // Replace with actual key
         #region BlacklistChecking
         static async Task<bool> CheckBlacklistStatus()
         {
@@ -292,7 +292,7 @@ namespace BasicToAdvance_01
                 {  
                     string hwid = ForHWIDBlack();
                     string ip = await IPForBlacklisted();
-                    int expiry = 1; // 0 means never expire [If You Enter 1 = 1Day , 2 = 2Day , 0 = Lifetime]
+                    int expiry = 2; // 0 means never expire [If You Enter 1 = 1Day , 2 = 2Day , 0 = Lifetime]
                     await AddToBlacklist(hwid, ip, "Multiple failed login attempts", expiry);
                     error.Show("You have been blacklisted due to multiple failed login attempts.");
                     await Task.Delay(2000);
